@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="flex items-center gap-2.5">
-                <a class="kt-btn kt-btn-outline" href="{{ url('/') }}">
+                <a class="kt-btn kt-btn-outline" href="{{ url('/') }}" target="_blank" rel="noopener noreferrer">
                     <i class="ki-filled ki-eye"></i>
                     View Website
                 </a>
