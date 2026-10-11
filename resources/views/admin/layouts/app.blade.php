@@ -57,6 +57,8 @@
         </div>
     </div>
 
+    @include('admin.partials.profile-modal')
+
     <script src="{{ asset($metronicAssetPath . '/js/core.bundle.js') }}"></script>
     <script src="{{ asset($metronicAssetPath . '/vendors/ktui/ktui.min.js') }}"></script>
     <script src="{{ asset($metronicAssetPath . '/vendors/apexcharts/apexcharts.min.js') }}"></script>

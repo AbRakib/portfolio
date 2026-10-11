@@ -79,7 +79,7 @@
                                 <i class="ki-filled ki-plus"></i>
                                 Add Project
                             </a>
-                            <a class="kt-btn kt-btn-outline justify-start" href="#">
+                            <a class="kt-btn kt-btn-outline justify-start" href="{{ route('admin.portfolio.edit') }}">
                                 <i class="ki-filled ki-user-edit"></i>
                                 Edit Profile
                             </a>

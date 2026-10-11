@@ -22,7 +22,7 @@
                     </span>
                 </div>
 
-                <div class="kt-menu-item active">
+                <div class="kt-menu-item {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
                     <a class="kt-menu-link border border-transparent items-center grow kt-menu-item-active:bg-accent/60 dark:kt-menu-item-active:border-border kt-menu-item-active:rounded-lg hover:bg-accent/60 hover:rounded-lg gap-[10px] ps-[10px] pe-[10px] py-[8px]" href="{{ route('admin.dashboard') }}">
                         <span class="kt-menu-icon items-start text-muted-foreground w-[20px]">
                             <i class="ki-filled ki-element-11 text-lg"></i>
@@ -33,13 +33,24 @@
                     </a>
                 </div>
 
-                <div class="kt-menu-item">
-                    <a class="kt-menu-link border border-transparent items-center grow hover:bg-accent/60 hover:rounded-lg gap-[10px] ps-[10px] pe-[10px] py-[8px]" href="#">
+                <div class="kt-menu-item {{ request()->routeIs('admin.portfolio.*') ? 'active' : '' }}">
+                    <a class="kt-menu-link border border-transparent items-center grow hover:bg-accent/60 hover:rounded-lg gap-[10px] ps-[10px] pe-[10px] py-[8px]" href="{{ route('admin.portfolio.edit') }}">
                         <span class="kt-menu-icon items-start text-muted-foreground w-[20px]">
                             <i class="ki-filled ki-briefcase text-lg"></i>
                         </span>
                         <span class="kt-menu-title text-sm font-medium text-foreground kt-menu-link-hover:!text-primary">
-                            Portfolio
+                            Profile
+                        </span>
+                    </a>
+                </div>
+
+                <div class="kt-menu-item {{ request()->routeIs('admin.blogs.*') ? 'active' : '' }}">
+                    <a class="kt-menu-link border border-transparent items-center grow kt-menu-item-active:bg-accent/60 dark:kt-menu-item-active:border-border kt-menu-item-active:rounded-lg hover:bg-accent/60 hover:rounded-lg gap-[10px] ps-[10px] pe-[10px] py-[8px]" href="{{ route('admin.blogs.index') }}">
+                        <span class="kt-menu-icon items-start text-muted-foreground w-[20px]">
+                            <i class="ki-filled ki-document text-lg"></i>
+                        </span>
+                        <span class="kt-menu-title text-sm font-medium text-foreground kt-menu-item-active:text-primary kt-menu-link-hover:!text-primary">
+                            Blogs
                         </span>
                     </a>
                 </div>

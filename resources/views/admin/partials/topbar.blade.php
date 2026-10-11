@@ -33,7 +33,7 @@
                         </div>
                         <div class="kt-menu-separator"></div>
                         <div class="kt-menu-item">
-                            <a class="kt-menu-link" href="#">
+                            <a class="kt-menu-link" href="#profile_modal" data-kt-modal-toggle="#profile_modal" aria-haspopup="dialog" aria-controls="profile_modal">
                                 <span class="kt-menu-icon">
                                     <i class="ki-filled ki-profile-circle"></i>
                                 </span>
@@ -49,9 +49,9 @@
                             </a>
                         </div>
                         <div class="kt-menu-separator"></div>
-                        <form class="kt-menu-item" method="POST" action="{{ route('logout') }}">
+                        <form class="kt-menu-item" id="logout_form" method="POST" action="{{ route('logout') }}">
                             @csrf
-                            <button class="kt-menu-link w-full" type="submit">
+                            <button class="kt-menu-link w-full" data-kt-modal-toggle="#logout_confirm_modal" type="button" aria-haspopup="dialog" aria-controls="logout_confirm_modal">
                                 <span class="kt-menu-icon">
                                     <i class="ki-filled ki-exit-right"></i>
                                 </span>
@@ -64,3 +64,21 @@
         </div>
     </div>
 </header>
+
+<div class="kt-modal" data-kt-modal="true" id="logout_confirm_modal" role="dialog" aria-modal="true" aria-labelledby="logout_confirm_modal_title" tabindex="-1">
+    <div class="kt-modal-content max-w-[420px] top-5 lg:top-[20%]">
+        <div class="kt-modal-header">
+            <h2 class="kt-modal-title" id="logout_confirm_modal_title">Confirm Logout</h2>
+            <button class="kt-btn kt-btn-sm kt-btn-icon kt-btn-ghost shrink-0" data-kt-modal-dismiss="true" type="button" aria-label="Close logout confirmation" title="Close">
+                <i class="ki-filled ki-cross" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="kt-modal-body">
+            <p class="text-sm text-secondary-foreground">Are you sure you want to logout?</p>
+        </div>
+        <div class="kt-modal-footer flex flex-wrap justify-end gap-3">
+            <button class="kt-btn kt-btn-outline" data-kt-modal-dismiss="true" type="button">No</button>
+            <button class="kt-btn kt-btn-primary" form="logout_form" type="submit">Yes</button>
+        </div>
+    </div>
+</div>
